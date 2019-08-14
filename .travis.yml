@@ -6,4 +6,4 @@ before_install:
     - docker build -t venuvayila/docker-react -f Dockerfile.dev .
 
 scripts:
-    - docker run venuvayila/docker-react npm run test -- --coverage
+    - docker run -e CI=true venuvayila/docker-react npm run test
